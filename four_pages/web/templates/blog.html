@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <title>Blog</title>
+</head>
+<body>
+
+<nav style="padding: 40px;" class="navbar navbar-expand-lg bg-body-tertiary bg-dark">
+  <div class="container-fluid">
+    <h3 style="color: white;">Django-App</h3>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active mx-5" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-5" href="{% url 'about' %}">About</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link mx-5" href="{% url 'contact' %}">Contact</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link mx-5" href="{% url 'blog' %}">Blog</a>
+        </li>
+
+
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 mx-5" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success      " type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-3">
+
+    <div class="jumbotron text-center">
+        <h3>Blog Page</h3>
+    </div>
+
+    <div class="container jumboton">
+        <div class="row">
+            <div class="col-md-6">
+                <img width="500px" src="{% static 'buss2.jpg' %}" alt="" srcset="">
+            </div>
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Donec nec faucibus erat.
+                        Maecenas quis lectus quis diam facilisis
+                        eleifend. Fusce ac tempus nulla. Etiam ma
+                        uris mauris, efficitur vel purus at, preti
+                        um porttitor sem. Ut posuere purus eu soda
+                        les laoreet. Curabitur ut risus id neque ti
+                        ncidunt tincidunt laoreet ac enim. Suspendi
+                        sse sed convallis nisi. Integer id efficitu
+                        r odio, ac semper erat. Suspendisse vel ele
+                        mentum lorem.
+
+                        Class aptent taciti sociosqu ad litora torquent
+                        per conubia nostra,
+                        per inceptos himenaeos. Vestibulum felis ex,
+                        consequat ac nisi vitae,
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="jumbotron gb-dark text-center">
+    <h3>Footer</h3>
+</div>
+
+<script src="{% static 'main.js' %}"></script>
+</body>
+</html>
